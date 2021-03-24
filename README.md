@@ -41,3 +41,10 @@ writeStats = true
 
 - data/marketing.yml
 - data/slider.json
+
+## tailwind-aa-theme의 변경사항을 가져옵니다. 
+- 변경된 부분에 대해 해당 프로젝트에서도 기록을 남겨야 netlify 까지 잘 반영됩니다. 
+
+```bash
+git submodule foreach git pull https://github.com/team-durumi/tailwind-aa-theme.git
+```
