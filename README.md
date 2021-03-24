@@ -1,22 +1,18 @@
 # 범용적으로 사용할 수 있는 tailwind-aa-theme
 
-## hugo site에 적용하기 위해 테마만 분리합니다. 
+## tailwind-aa-theme를 hugo 프로젝트 themes 폴더에 복사합니다. 
 
-
-## As a Project
-
-```bash
-npm install
-hugo server
+To use this theme
+```shell
+cd HUGO_SITE_DIR/themes
+git clone https://github.com/woonjjang/tailwind-aa-theme
 ```
 
-## As a Theme
-
-Import `github.com/bep/hugo-starter-tailwind-basic/v2` (use `github.com/bep/hugo-starter-tailwind-basic` if you want/need Tailwind 1.x.) into your project, and then run:
 
 ```bash
 hugo mod npm pack
 npm install
+hugo server -D
 ```
 
 You need to add this to your `config.toml` (the stats are used by the CSS purging):
@@ -25,3 +21,12 @@ You need to add this to your `config.toml` (the stats are used by the CSS purgin
 [build]
 writeStats = true
 ```
+
+- config.toml의 사이트 정보를 변경합니다. 
+- node module package를 설치합니다. 
+
+
+## ExampleSite의 폴더를 hugo 폴더로 복제하고 사용자 정보를 업데이트합니다. 
+
+- data/marketing.yml
+- data/slider.json
