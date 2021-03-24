@@ -1,0 +1,151 @@
+<!-- 시각적으로 전체 자료와 Variable 사용을 돕는 페이지를 만듭니다.  -->
+
+<div id="main-content" class="fc02 container">
+  <div class="row">
+    <!-- contentA -->
+    <div class="contentA col">
+      <div class="fc02_02">
+        <!-- {{ printf "%#v" .Sitemap.Filename }} -->
+        <!--  사이트 전역 / 경로-->
+        <h1>Path</h1><br>  
+         <a href="{{ "/" | relLangURL}}{{ .Sitemap.Filename }}">{{ printf "%#v" .Sitemap.Filename }}</a><br><br><br> 
+        <h1>Site</h1>
+          <table class="table lc03">
+            <thead>
+              <tr>
+                <th scope="col">Site.Title</th>
+                <th scope="col">Site.Allpages</th>
+                <th scope="col">Site.Author</th>
+                <th scope="col">Site.BaseURL</th>
+                <th scope="col">Copyright</th>
+                <th scope="col">Site.Taxonomies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>{{ .Site.Title }}</td>
+                <th>{{ .Site.AllPages }}</td>
+                <td>{{ .Site.Params.author }}</td>
+                <td>{{ .Site.BaseURL }}</td>
+                <td>{{ .Site.Copyright }}</td>
+                <td>{{ .Site.Taxonomies }}</td>
+              </tr>
+            </tbody>
+          </table>
+        <!--  분류  -->  
+        <h1>Taxonomy(1depth-2depth)</h1>
+        <hr>
+          <ul>
+            {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+              <li><h2><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</h2></a>
+                <ul>
+                  {{ range $key, $value := $taxonomy }}
+                  <li><h4><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}{{ "/" }}{{ $key | urlize }}">{{ $taxonomyname }}/{{ $key }}</a></h4></li>
+                  {{ end }}
+                </ul>
+              </li>
+            {{ end }}
+          </ul>
+        <h1>Taxonomy-Term-items</h1>
+        <hr>
+          <ul>
+            {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+              <li><h2><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</h2></a>
+                <ul>
+                  {{ range $key, $value := $taxonomy }}
+                  <li><h4><a href="">{{ $key }}<a></h4></li>
+                        <ul>
+                        {{ range $value.Pages }}
+                            <li><a href="{{ .Permalink}}"> - {{ .LinkTitle }}</a> </li>
+                        {{ end }}
+                        </ul>
+                  {{ end }}
+                </ul>
+              </li>
+            {{ end }}
+          </ul>             
+        <h1>Contents/items</h1>
+        <table class="table lc03">
+          <thead>
+            <tr>
+              <th scope="col">Idendifier</th>
+              <th scope="col">Title</th>
+              <th scope="col">Creator</th>
+              <th scope="col">Date</th>
+              <th scope="col">File/Path</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range where .Site.RegularPages "Type" "items" }}
+            <tr>
+              <th scope="row">{{ .Params.identifier }}</th>
+              <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+              <td>{{ .Params.creator }}</td>
+              <td>{{ .Date.Format "2006-01-02" }}</td>
+              <td>{{ .File.Path }}</td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+        <!--  웹사이트 콘텐츠 영역-->
+        <h1>Data</h1>
+        <ul>
+            {{ range $.Site.Data.faq }}
+            <li> 
+              {{ .title }}<br>{{ .content }}
+            </li>
+            {{ end }}  
+        </ul>
+        <hr>
+        <ul>
+            {{ range $.Site.Data.hompage }}
+            <li> 
+              {{ .infobox.title }}<br>{{ .content }}
+            </li>
+            {{ end }}  
+        </ul>
+        <!--  테스트 영역 -->
+        <h1>Test</h1>
+
+        {{ printf "%#v" .TableOfContents }}
+
+        <!-- {{ range $.Site.Data.jazz.bass }}
+          <ul>
+            {{ range .discography }}
+                <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        {{ end }} -->
+
+        <!-- Site 전역 변수 -->
+        {{ printf "%#v" .Site.Author }}<br>
+        {{ .Site.Author }}<br>
+        {{ .Site.RegularPages }}<br>
+        {{ .Site.Pages }}<br>
+        {{ .Site.Params.author }}<br> 
+
+        <!-- Page 전역 변수 --> 
+
+        {{ printf "%#v" .Page.Aliases }}
+        {{ printf "%#v" .Page.Dir }}
+        {{ printf "%#v" .Page.Permalink }}
+        {{ printf "%#v" .Page.Type}}
+        {{ printf "%#v" .Page.UniqueID}}
+
+        <!-- Taxonomy Variables -->
+
+
+        <!-- File 전역 변수 --> 
+        {{ printf "%#v" .File.Path }}<br/>
+        {{ printf "%#v" .File.LogicalName }}<br/>
+        {{ printf "%#v" .File.TranslationBaseName }}<br/>
+        {{ printf "%#v" .File.Lang }}<br/>
+        {{ printf "%#v" .File.Dir }}<br/>
+        {{ printf "%#v" .File.UniqueID }}<br/>
+        {{ .Permalink }}
+ 
+      </div>
+    </div>
+     <!-- //contentA -->
+  </div>
+</div>    
