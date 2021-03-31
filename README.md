@@ -48,3 +48,9 @@ writeStats = true
 ```bash
 git submodule foreach git pull https://github.com/team-durumi/tailwind-aa-theme.git
 ```
+
+## 헤더메뉴/푸터메뉴 
+- theme.toml 파일에 있는 메뉴 설정을 config.toml 파일에 지정합니다. 
+```
+theme.toml
+```
