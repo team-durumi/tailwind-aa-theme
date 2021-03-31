@@ -62,3 +62,6 @@ cd HUGO_SITE_DIR/themes
 git submodule add https://github.com/kaushalmodi/hugo-debugprint
 git submodule update --init --recursive
 ```
+
+## contents 에 맞는 목록과 layout을 적용합니다. 
+- marketing 영역에서 블로그(post)를 추가합니다. 임시로 아이템목록을 뿌려놓습니다.
