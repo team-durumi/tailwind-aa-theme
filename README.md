@@ -54,3 +54,11 @@ git submodule foreach git pull https://github.com/team-durumi/tailwind-aa-theme.
 ```
 theme.toml
 ```
+
+## hugo-debugprint를 추가해서 변수를 확인합니다.
+
+```bash
+cd HUGO_SITE_DIR/themes
+git submodule add https://github.com/kaushalmodi/hugo-debugprint
+git submodule update --init --recursive
+```
