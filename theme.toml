@@ -1,0 +1,57 @@
+name = "tailwind-aa-theme"
+descirption = "Visual Design System 을 포함하고 있는
+오픈소스 디지털아카이브"
+
+[author]
+  name = "Team-Durumi"
+  homepage = "https://archives.durumi.io"
+
+# 메뉴관련 처리
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  URL = "/"
+  weight = 1
+
+  [[menu.main]]
+  name = "Marketing Layout"
+  URL = "marketing"
+  weight = 2
+
+  [[menu.main]]
+  name = "(C)items"
+  URL = "items"
+  weight = 3
+
+  [[menu.main]]
+  name = "(C)colletions"
+  URL = "collections"
+  weight = 4
+
+  [[menu.main]]
+  name = "(C)posts"
+  URL = "posts"
+  weight = 5
+
+  ############# footer menu #############
+  [[menu.footer]]
+  name = "Marketing Layout"
+  URL = "marketing"
+  weight = 1
+
+  [[menu.footer]]
+  name = "(C)items"
+  URL = "items"
+  weight = 2
+
+  [[menu.footer]]
+  name = "(C)colletions"
+  URL = "collections"
+  weight = 3
+
+  [[menu.footer]]
+  name = "(C)posts"
+  URL = "posts"
+  weight = 4
