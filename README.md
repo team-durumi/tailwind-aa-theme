@@ -46,7 +46,7 @@ writeStats = true
 - 변경된 부분에 대해 해당 프로젝트에서도 기록을 남겨야 netlify 까지 잘 반영됩니다. 
 
 ```bash
-git submodule foreach git pull orignin master
+git submodule foreach git pull origin master
 ```
 
 ## 헤더메뉴/푸터메뉴 
