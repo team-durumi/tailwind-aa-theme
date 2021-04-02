@@ -15,14 +15,10 @@ module.exports = {
 		enabled: process.env.HUGO_ENVIRONMENT === 'production',
 	theme: {
 		screens: {
-		  'tablet': '640px',
-		  // => @media (min-width: 640px) { ... }
-
-		  'laptop': '1440px',
-		  // => @media (min-width: 1440px) { ... }
-
-		  'desktop': '2560px',
-		  // => @media (min-width: 2560px) { ... }
+	      sm: '100%',
+	      md: '764px',
+	      lg: '976px',
+	      xl: '1440px',
 		},
 	},
     content: [
