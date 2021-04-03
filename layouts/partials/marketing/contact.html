@@ -1,17 +1,64 @@
-<!-- Contact -->
-{{ with site.Data.marketing.faq }}
+<!-- Contact / alpineJS 스크립트 요소 활용부분 업데이트 -->
+{{ with site.Data.marketing.contact }}
 <section class="text-gray-600 body-font relative">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
+      <h2 class="text-xs text-blue-500 tracking-widest font-medium title-font mb-1">{{ .category }}</h2>
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">{{ .title }}</h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">{{ .content }}</p>
     </div>
     <div class="lg:w-1/2 md:w-2/3 mx-auto">
-      <div class="flex flex-wrap -m-2">    
-        <div class="p-2 w-full" alt="이름">
+      <div class="flex flex-wrap -m-2">  
+        <!-- Filefond / 파일업로드 -->
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-file-poster/dist/filepond-plugin-file-poster.css" rel="stylesheet">
+    <script src="https://unpkg.com/filepond-plugin-file-poster/dist/filepond-plugin-file-poster.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <div class="p-2 w-full">
+      <div
+          class="relative"
+          x-data="{
+              pond: null
+          }"
+
+          x-init="
+              FilePond.registerPlugin(FilePondPluginFileValidateType);
+              FilePond.registerPlugin(FilePondPluginFileValidateSize);
+              FilePond.registerPlugin(FilePondPluginImagePreview);
+              FilePond.setOptions({
+                  acceptedFileTypes:
+                  [
+                      'image/png', 'image/jpeg'
+                  ],
+                  allowMultiple: true,
+                  maxFileSize: '1MB'
+              });
+              const filepond = FilePond.create(
+                  $refs.filepond
+              );
+              pond = filepond;
+          "
+
+      >
+          <label for="name" class="leading-7 text-sm text-gray-600">파일업로드</label>
+          <input type="file" x-ref="filepond" class="bg-gray-100 bg-opacity-50">
+      </div>
+    </div>
+
+        <div class="p-2 w-full" alt="제목">
           <div class="relative">
-            <label for="name" class="leading-7 text-sm text-gray-600">이름</label>
-            <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <label for="name" class="leading-7 text-sm text-gray-600">제목</label>
+            <input type="text" id="name" name="name" placeholder="아이템 제목을 추가하세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+        </div>
+        <div class="p-2 w-full" alt="생산자">
+          <div class="relative">
+            <label for="name" class="leading-7 text-sm text-gray-600">생산자</label>
+            <input type="text" id="name" name="name" placeholder="자료를 업로드하는 생산자 본인의 이름을 남겨주세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-full" alt="이메일">
@@ -20,14 +67,75 @@
             <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
-        <div class="p-2 w-full" alt="textarea">
+        <div class="p-2 w-full" alt="자료">
           <div class="relative">
-            <label for="message" class="leading-7 text-sm text-gray-600">내용</label>
-            <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            <label for="message" class="leading-7 text-sm text-gray-600">자료설명</label>
+            <textarea id="message" name="message" placeholder="설명을 남겨주세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
           </div>
         </div>
+
+        <!-- Tagify / 태그추가 -->
+    <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/@yaireo/tagify"></script>
+    <script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
+    <div class="p-2 w-full" alt="tag">
+      <div
+      class="relative"
+      x-cloak
+      wire:ignore
+      x-data="{
+          tagify: null
+      }"
+
+      class="w-full"
+
+      x-init="
+          tagify = new Tagify($refs['tag-input']);
+      "
+
+      >
+          <label for="message" class="leading-7 text-sm text-gray-600">태그</label>
+          <input x-ref="tag-input" placeholder="태그를 입력해주세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+    </div>
+
+    <!-- Litepicker / 날짜입력 -->
+    <link src="https://cdn.jsdelivr.net/npm/litepicker/dist/css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/litepicker/dist/js/main.js"></script>
+    <div class="p-2 w-full" alt="tag">
+      <label for="message" class="leading-7 text-sm text-gray-600">자료 생산일자 추가</label>
+      <div
+          x-data
+          x-init="
+              new Litepicker({
+                  element: $refs.input,
+                  singleMode: true,
+                  format: 'DD/MM/YYYY',
+                  onSelect: function(date){
+                      console.log(date)
+                  },
+                  minDate: new Date(Date.now() + 1*24*60*60*1000)
+              });
+          "
+          class="flex rounded max-w-sm relative"
+      >
+          <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 text-gray-500 sm:text-sm">
+              <svg class="h-5 w-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C5.44772 2 5 2.44772 5 3V4H4C2.89543 4 2 4.89543 2 6V16C2 17.1046 2.89543 18 4 18H16C17.1046 18 18 17.1046 18 16V6C18 4.89543 17.1046 4 16 4H15V3C15 2.44772 14.5523 2 14 2C13.4477 2 13 2.44772 13 3V4H7V3C7 2.44772 6.55228 2 6 2ZM6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9H14C14.5523 9 15 8.55228 15 8C15 7.44772 14.5523 7 14 7H6Z"/>
+              </svg>
+          </span>
+
+          <input
+              value="01/04/2021"
+              x-ref="input"
+              name="date"
+              class="rounded-r border border-gray-300 px-3 py-2 text-gray-700 w-full focus:outline-none focus:shadow-outline"
+          />
+      </div>
+    </div>
+
         <div class="p-2 w-full">
-          <button class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Summit</button>
+          <button class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">신청</button>
         </div>
       </div>
     </div>
