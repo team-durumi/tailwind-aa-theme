@@ -13,12 +13,7 @@
 	{{ partial "marketing/twobox.html" . }}
 	{{ partial "marketing/faq_accordion.html" . }}
 	{{ partial "marketing/cta.html" . }}
-
-	<article class="prose lg:prose-xl">
-		<h1 class="text-4xl">
-		  	{{ .Title }}
-		</h1>
-			{{ .Content }}
-	</article>
+	{{ partial "marketing/hero-collection.html" . }}
+	{{ partial "marketing/image-masonry.html" . }}
 
 {{ end }}      
