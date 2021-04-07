@@ -1,5 +1,6 @@
 const theme = require('tailwindcss/defaultTheme');
 const typography = require('@tailwindcss/typography');
+const colors = require('tailwindcss/colors')
 
 //const colorBrand = 'var(--color-pretty)';
 
@@ -19,6 +20,13 @@ module.exports = {
 	      md: '764px',
 	      lg: '976px',
 	      xl: '1440px',
+		},
+		extend: {
+		  colors: {
+        	'light-blue': colors.lightBlue,
+       		primary: '#245AE4',
+        	cyan: colors.cyan,
+		  },
 		},
 	},
     content: [
