@@ -38,7 +38,7 @@
     		{{ range $.Site.Data.marketing.images }}
             <li class="absolute cursor-pointer m-2 block">
                 <div>
-                    <img class="w-64 " src="{{ .src }}" alt="{{ .caption }}">
+                    <img class="w-64 " src="{{ .src | absURL }}" alt="{{ .caption }}">
                     <!-- <p>{{ .alt }}</p>
                     <p>{{ .caption }}</p> -->
                 </div>
