@@ -33,7 +33,7 @@ writeStats = true
 - node module package를 설치합니다. 
 - config.toml의 사이트 정보를 변경합니다. 
 - node module package를 설치합니다. 
-- .gitignore 파일에 node_modules / resources / publc 폴더를 추가합니다. 
+- .gitignore 파일에 node_modules / resources / public 폴더를 추가합니다. 
 - netlify.toml 파일에서 build version을 확인합니다.
 
 
