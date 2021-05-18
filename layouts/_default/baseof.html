@@ -15,10 +15,11 @@
       {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
     {{ end }}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width">
   </head>
   {{ partial "basic/header.html" . }}
-  <body class="my-10">
-    <div class="container px-4 lg:mx-auto">
+  <body>
+    <div class="xl:mx-auto lg:mx-auto md:mx-auto sm:mx-auto">
       {{ block "main" . }}{{ end }}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" defer></script>

@@ -24,13 +24,25 @@ user:
     instagram : http://instagram.com
     linkedin : http://linkedin.com
 
+######## Partials/app에 노출되는 사용자 데이터를 편집합니다. ########
 
+############################ simple-browse.html ##########################
+browseItems:
+  category : 아카이브(국내외)
+  title : 디지털아카이브 목록
+  enable : true
+  url : https://docs.google.com/spreadsheets/d/e/2PACX-1vRHcD8xBpgJwbVpcQj23lzwmjMH98kMRIIOwLU0oRefC0dZh6Fh1RLE6QdEbM3xrFla9gJQta59DXVv/pub
+  content : 국내외 디지털아카이브를 수집합니다. 개발 및 컨설팅에 참고하고자 수집을 시작했습니다. @daamable @woonjjang
 
 ######## Partials/Marketing에 노출되는 사용자 데이터를 편집합니다. ########
 
 ########################## slider_alpine.html(slider.json) ##########################
 
+########################## item-image-masonry.html ##########################
 images:
+  - src: 'https://images.unsplash.com/photo-1591030617255-43892ec644bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80'
+    alt: 'A protester in Washington DC holds a sign featuring George Floyd.'
+    caption: 'A protester in Washington DC holds a sign featuring George Floyd.'
   - src: 'https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1422&q=80'
     alt: 'Image of Black Lives Matter protest in London'
     caption: 'Black Lives Matter - London June 2020'
@@ -40,6 +52,34 @@ images:
   - src: 'https://images.unsplash.com/photo-1591030617255-43892ec644bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80'
     alt: 'A protester in Washington DC holds a sign featuring George Floyd.'
     caption: 'A protester in Washington DC holds a sign featuring George Floyd.'    
+  - src: 'https://images.unsplash.com/photo-1542683305-710078a12f73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+    alt: 'A protester in Washington DC holds a sign featuring George Floyd.'
+    caption: 'A protester in Washington DC holds a sign featuring George Floyd.'  
+  - src: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+    alt: 'A protester in Washington DC holds a sign featuring George Floyd.'
+    caption: 'A protester in Washington DC holds a sign featuring George Floyd.'
+  - src: 'https://images.unsplash.com/photo-1544333323-ec9ed3218dd1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+    alt: 'A protester in Washington DC holds a sign featuring George Floyd.'
+    caption: 'A protester in Washington DC holds a sign featuring George Floyd.'        
+  - src: 'https://images.unsplash.com/photo-1591030617255-43892ec644bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80'
+    alt: 'A protester in Washington DC holds a sign featuring George Floyd.'
+    caption: 'A protester in Washington DC holds a sign featuring George Floyd.'
+  - src: 'https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1422&q=80'
+    alt: 'Image of Black Lives Matter protest in London'
+    caption: 'Black Lives Matter - London June 2020'
+  - src: 'https://images.unsplash.com/photo-1591030617255-43892ec644bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80'
+    alt: 'A protester in Washington DC holds a sign featuring George Floyd.'
+    caption: 'A protester in Washington DC holds a sign featuring George Floyd.'    
+  - src: 'https://images.unsplash.com/photo-1542683305-710078a12f73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+    alt: 'A protester in Washington DC holds a sign featuring George Floyd.'
+    caption: 'A protester in Washington DC holds a sign featuring George Floyd.'  
+  - src: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+    alt: 'A protester in Washington DC holds a sign featuring George Floyd.'
+    caption: 'A protester in Washington DC holds a sign featuring George Floyd.'
+  - src: 'https://images.unsplash.com/photo-1544333323-ec9ed3218dd1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+    alt: 'A protester in Washington DC holds a sign featuring George Floyd.'
+    caption: 'A protester in Washington DC holds a sign featuring George Floyd.'        
+  
 
 ############################ featured-items ##########################
 featuredItems:
@@ -153,3 +193,11 @@ cta:
     enable : true
     label : 팀 두루미 프로젝트 살펴보기
     url : https://archives.durumi.io/
+
+####################### contact #####################
+
+contact:
+  enable : true
+  category : 수집
+  title : 함께 참여해서 아이템을 수집하세요. !
+  content : 디지털 아카이브에서 사용하는 기본 파일을 드래그해서 드롭하세요. 목록이 조사된 엑셀 파일이나, CSV 파일을 업로드하셔도 됩니다.

@@ -1,5 +1,6 @@
 const theme = require('tailwindcss/defaultTheme');
 const typography = require('@tailwindcss/typography');
+const colors = require('tailwindcss/colors')
 
 //const colorBrand = 'var(--color-pretty)';
 
@@ -15,14 +16,17 @@ module.exports = {
 		enabled: process.env.HUGO_ENVIRONMENT === 'production',
 	theme: {
 		screens: {
-		  'tablet': '640px',
-		  // => @media (min-width: 640px) { ... }
-
-		  'laptop': '1440px',
-		  // => @media (min-width: 1440px) { ... }
-
-		  'desktop': '2560px',
-		  // => @media (min-width: 2560px) { ... }
+	      sm: '100%',
+	      md: '764px',
+	      lg: '976px',
+	      xl: '1440px',
+		},
+		extend: {
+		  colors: {
+        	'light-blue': colors.lightBlue,
+       		primary: '#245AE4',
+        	cyan: colors.cyan,
+		  },
 		},
 	},
     content: [

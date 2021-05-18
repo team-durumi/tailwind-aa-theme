@@ -1,4 +1,5 @@
 node_modules/
 public/
 resources/
+node_modules/resources/publc
 hugo_stats.json
