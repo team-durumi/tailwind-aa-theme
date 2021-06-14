@@ -65,3 +65,19 @@ git submodule update --init --recursive
 
 ## contents 에 맞는 목록과 layout을 적용합니다. 
 - marketing 영역에서 블로그(post)를 추가합니다. 임시로 아이템목록을 뿌려놓습니다.
+
+## Simple Search
+- https://github.com/kaushalmodi/hugo-search-fuse-js
+- submodule로 복사하고, 테마를 설정합니다. ```theme = ["hugo-search-fuse-js", "my-theme"]```
+- search.md 를 content 폴더에 추가합니다. 
+- aa 테마 ```layouts/_default/search.html``` 을 복사해서 프로젝트 layout에 지정해주세요. 
+
+```
++++
+title = "Search"
+layout = "search"
+outputs = ["html", "json"]
+[sitemap]
+  priority = 0.1
++++
+```
