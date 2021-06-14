@@ -81,3 +81,12 @@ outputs = ["html", "json"]
   priority = 0.1
 +++
 ```
+
+## netlify CMS
+- https://www.netlifycms.org/docs/hugo/#creating-a-new-site 앞 부분은 스킵
+- ```static/admin``` 폴더에 index.html과 config.yml 을 추가합니다. (git-gateway 를 수정하지 않는다.)
+- Front 경로 접근할 때 Netlify Identity를 확인할 수 있는 스크립트도 반드시 추가한다. 
+- items는 depth가 있어서 md file을 모두 인식하지 못 함. (post로 변경)
+
+## items record management
+- ```exampleSite/content/items``` 폴더를 content 폴더에 복사해서 item에 해당하는 유형을 정리합니다. 
