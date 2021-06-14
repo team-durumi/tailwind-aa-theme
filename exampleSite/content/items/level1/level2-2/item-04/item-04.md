@@ -10,7 +10,7 @@ creators: "team-durumi"
 tags:	tag2
 created-date: ""
 link: "http://www.peace.com"
-image: "/items/level2-2/item-04/item-04.png"
+image: "/items/level1/level2-2/item-04/item-04.png"
 ---
 
 This is the second paragraph in the list item. You're
