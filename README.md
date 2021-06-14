@@ -16,8 +16,7 @@ git submodule add https://github.com/team-durumi/tailwind-aa-theme
 git commit -m "submodule add tailwind-aa-theme"
 git submodule update --init --recursive
 ```
-
-
+hugo 프로젝트 최상위 폴더로 돌아와서
 ```bash
 hugo mod npm pack
 npm install
