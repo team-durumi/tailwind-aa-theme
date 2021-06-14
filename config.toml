@@ -1,6 +1,10 @@
 baseURL = "https://example.org"
 
-disableKinds = ["page", "section", "taxonomy", "term"]
+[taxonomies]
+  tag = "tags"
+  creator = "creators"
+
+paginate = "5"
 
 [module]
   [module.hugoVersion]
