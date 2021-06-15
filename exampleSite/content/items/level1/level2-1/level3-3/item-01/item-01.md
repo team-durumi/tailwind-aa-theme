@@ -1,7 +1,7 @@
 ---
 author: "Durumi"
 date: 2021-06-02T04:35:03Z
-draft: true
+draft: false
 identifier: "aa-001"
 title: item-01
 weight: 10

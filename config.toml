@@ -4,8 +4,6 @@ baseURL = "https://example.org"
   tag = "tags"
   creator = "creators"
 
-paginate = "5"
-
 [module]
   [module.hugoVersion]
     extended = false
