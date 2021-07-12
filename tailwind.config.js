@@ -14,7 +14,7 @@ module.exports = {
 	important: true, // See https://tailwindcss.com/docs/configuration#important
 	purge: {
 		enabled: process.env.HUGO_ENVIRONMENT === 'production',
-	darkMode: 'media',	
+	darkMode: 'class',	
 	theme: {
 		screens: {
 	      sm: '100%',
