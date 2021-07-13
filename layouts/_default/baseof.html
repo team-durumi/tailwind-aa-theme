@@ -17,9 +17,9 @@
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
     <meta name="viewport" content="width=device-width">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    {{ define "header" }}{{ end }}
   </head>
   <body>
+    {{ block "header" . }}{{ end }}
     <div class="xl:mx-auto lg:mx-auto md:mx-auto sm:mx-auto">
       {{ block "main" . }}{{ end }}
     </div>
