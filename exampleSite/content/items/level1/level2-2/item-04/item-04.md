@@ -1,18 +1,30 @@
 ---
-author: "Durumi"
+reference_code: 4
 date: 2021-06-02T04:35:03Z
-draft: false
-identifier: "aa-004"
+draft: true
+level_of_description: level1/level2-1/level3-3
+media_type: photo
 title: item-04
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt sapien quis massa dignissim pretium. Donec mattis leo id risus blandit, nec porta ligula tincidunt. Nullam id accumsan lacus. 
 weight: 10
-author: "durumi"
-creators: "team-durumi"
-tags: tag2
-created-date: ""
-link: "http://www.peace.com"
-image: "/items/level1/level2-2/item-04/item-04.png"
----
 
-This is the second paragraph in the list item. You're
-only required to indent the first line. Lorem ipsum dolor
-sit amet, consectetuer adipiscing elit.
+modified_at: 2021-07-13T17:08:03Z
+created_at: 2021-06-02T04:35:03Z
+link: 
+components:
+- items/level1/level2-1/level3-3/item-04/item-04.png
+
+tags:
+- tag1
+creators:
+- 진로
+subjects: 
+- pork
+sources: 
+- suncrud
+venues: 
+- 은평
+
+public_access_status: true
+copyright_status: true
+---
