@@ -12,7 +12,7 @@ modified_at: 2021-07-13T17:08:03Z
 created_at: 2021-06-02T04:35:03Z
 link: 
 components:
-- items/level1/level2-1/level3-3/item-04/item-04.png
+- items/level1/level2-1/item-04/item-04.png
 
 tags:
 - tag1
