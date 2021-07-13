@@ -1,18 +1,18 @@
 ---
-reference_code: 3
+reference_code: 1
 date: 2021-06-02T04:35:03Z
 draft: false
 level_of_description: level1/level2-1/level3-3
 media_type: photo
-title: item-03
+title: item-01
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt sapien quis massa dignissim pretium. Donec mattis leo id risus blandit, nec porta ligula tincidunt. Nullam id accumsan lacus. 
-weight: 30
+weight: 10
 
 modified_at: 2021-07-13T17:08:03Z
 created_at: 2021-06-02T04:35:03Z
 link: 
 components:
-- items/level1/level2-1/level3-3/item-03/item-03.png
+- items/level1/level2-1/level3-3/item-01.png
 
 tags:
 - tag1
