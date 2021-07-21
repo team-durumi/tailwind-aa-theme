@@ -146,9 +146,9 @@
 			        <dt class="text-sm font-medium text-gray-500">
 			          Tags
 			        </dt>
-			        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+			        <dd class="mt-1 text-sm text-blue-600 underline sm:mt-0 sm:col-span-2">
 			         {{ range .Params.Tags }}
-			        	 {{ . }}
+			        	 <a href="/tags/{{ . }}">{{ . }}</a>
 			         {{ end }}	 
 			        </dd>
 			      </div>
@@ -157,9 +157,9 @@
 			        <dt class="text-sm font-medium text-gray-500">
 			          Creators
 			        </dt>
-			        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+			        <dd class="mt-1 text-sm text-blue-600 underline sm:mt-0 sm:col-span-2">
 			         {{ range .Params.Creators }}
-			        	 {{ . }}
+			        	 <a href="/creators/{{ . }}">{{ . }}</a>
 			         {{ end }}		
 			        </dd>
 			      </div>
@@ -170,9 +170,9 @@
 			        <dt class="text-sm font-medium text-gray-500">
 			          Subjects
 			        </dt>
-			        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+			        <dd class="mt-1 text-sm text-blue-600 underline sm:mt-0 sm:col-span-2">
 			         {{ range .Params.Subjects }}
-			        	 {{ . }}
+			        	 <a href="/subjects/{{ . }}">{{ . }}</a>
 			         {{ end }}		
 			        </dd>
 			      </div>
@@ -183,9 +183,9 @@
 			        <dt class="text-sm font-medium text-gray-500">
 			          Sources
 			        </dt>
-			        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+			        <dd class="mt-1 text-sm text-blue-600 underline sm:mt-0 sm:col-span-2">
 			         {{ range .Params.Sources }}
-			        	 {{ . }}
+			        	 <a href="/sources/{{ . }}">{{ . }}</a>
 			         {{ end }}	
 			        </dd>
 			      </div>
@@ -196,9 +196,9 @@
 			        <dt class="text-sm font-medium text-gray-500">
 			          Venues 
 			        </dt>
-			        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+			        <dd class="mt-1 text-sm text-blue-600 underline sm:mt-0 sm:col-span-2">
 			         {{ range .Params.Venues }}
-			        	 {{ . }}
+			        	 <a href="/venues/{{ . }}">{{ . }}</a>
 			         {{ end }}	
 			        </dd>
 			      </div>
