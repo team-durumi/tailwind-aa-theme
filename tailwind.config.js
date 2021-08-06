@@ -12,9 +12,9 @@ const px = (px) => `${px}px`;
 
 module.exports = {
 	important: true, // See https://tailwindcss.com/docs/configuration#important
+	darkMode: 'media',	
 	purge: {
 		enabled: process.env.HUGO_ENVIRONMENT === 'production',
-	darkMode: 'class',	
 	theme: {
 		screens: {
 	      sm: '100%',
