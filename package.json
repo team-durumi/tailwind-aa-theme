@@ -4,7 +4,6 @@
 		"type": "git",
 		"url": "https://github.com/bep/hugo-starter-tailwind-basic.git"
 	},
-	"dependencies": {},
 	"devDependencies": {
 		"@tailwindcss/typography": "^0.3.0",
 		"autoprefixer": "^10.0.4",
@@ -13,6 +12,6 @@
 		"postcss-purgecss": "^2.0.3",
 		"tailwindcss": "^2.0.1"
 	},
-	"name": "hugo-starter-tailwind-basic",
+	"name": "tailwind-aa-theme",
 	"version": "0.1.0"
 }
