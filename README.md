@@ -168,3 +168,7 @@ cd HUGO_SITE_DIR/themes
 git submodule add https://github.com/kaushalmodi/hugo-debugprint
 git submodule update --init --recursive
 ```
+
+## darkmode
+- baseof.html에 해당 스크립트를 삽입해서 manually 작동하도록 처리함. 
+- https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
