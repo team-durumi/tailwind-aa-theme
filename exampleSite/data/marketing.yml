@@ -121,6 +121,14 @@ featuredItems:
       creator: 951.10.17, RG 111-SC-Box 813-382561, NARA
       url : /items/0014               
 
+############################ featured-No ##########################
+featuredNumbers:
+  enable : true
+  title : 냉전평화연구센터 디지털아카이브 
+  subtitle : items 공개현황
+  content : 2021년 현재 아카이브는 아래와 같은 아이템 및 연관 콘텐츠를 제공하고 있습니다. 관련된 아이템들은 직접 확인할 수 있습니다.
+  image : img/cover-ccwps.jpg
+
 ############################ hero-right/left ##########################
 heroRight:
   enable : true
