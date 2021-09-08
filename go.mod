@@ -1,3 +1,3 @@
-module github.com/bep/hugo-starter-tailwind-basic/v2
+module github.com/team-durumi/tailwind-aa-theme
 
-go 1.15
+go 1.17
