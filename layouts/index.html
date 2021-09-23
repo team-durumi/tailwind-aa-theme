@@ -3,6 +3,9 @@
 {{ end }}
 
 {{ define "main" }}
+	{{- with .Site.GetPage "/items/mockups.md" }}
+		{{ partial "marketing/photo-of-the-day" . }}
+	{{ end -}}
 	{{ partial "marketing/hero-right" . }}
 	{{ partial "marketing/cta.html" . }}
 	{{ partial "marketing/faq-accordion" . }}
