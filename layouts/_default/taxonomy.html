@@ -18,10 +18,16 @@
         </div>
       </div>
       <div class="w-full lg:w-2/3 flex flex-wrap px-3">
-      	{{ range first 1 .Pages.ByDate }}
-          <iframe class="rounded w-full h-96 aspect-w-4 aspect-h-3" src="{{ .Params.link }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {{ if .Params.link }}
+          {{ range first 1 .Pages.ByDate }}
+            <iframe class="rounded w-full h-96 aspect-w-4 aspect-h-3" src="{{ .Params.link }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          {{ end }}
         {{ end }}
-      	<!-- <img class="rounded" src="https://images.unsplash.com/photo-1467803738586-46b7eb7b16a1?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1189&amp;q=80" alt=""> -->
+        {{ if .Params.components }}
+          {{ range first 1 .Pages.ByDate }}
+             <img class="rounded" src="{{ . | absURL }}"" alt="item object">
+          {{ end }}
+        {{ end}}
       </div>
     </div>
   </div>
@@ -46,7 +52,7 @@
             {{ end }}       
           </div>
           <div class="md:flex-grow ml-6">
-            <!-- <h2 class="tracking-widest text-sm title-font font-medium text-blue-600 dark:text-blue-500 mb-1">{{ dateFormat "2006, January 2" .Date }}</h2> -->
+            <h2 class="tracking-widest text-sm title-font font-medium text-blue-600 dark:text-blue-500 mb-1">{{ dateFormat "2006, January 2" .Date }}</h2>
             <h2 class="text-2xl text-blue-600 dark:text-blue-500 mb-2">{{ .Title }}</h2>
             <p class="leading-relaxed ext-gray-800 dark:text-gray-300">{{ .Params.description }}</p>
             <p class="leading-relaxed text-gray-800 dark:text-gray-500">{{ .Params.media_type }} | {{ .Params.time_courts}} | {{ .Params.local_identifier }}</p>
