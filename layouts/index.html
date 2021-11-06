@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-	{{- with .Site.GetPage "/items/mockups.md" }}
+	{{- with .Site.GetPage "/items/mockup.md" }}
 		{{ partial "marketing/photo-of-the-day" . }}
 	{{ end -}}
 	{{ partial "marketing/hero-right" . }}
