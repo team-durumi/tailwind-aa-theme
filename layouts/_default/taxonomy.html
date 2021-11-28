@@ -27,8 +27,6 @@
                 {{ $fileExtension := index (last 1 (split . ".")) 0 }}
                 {{ if in "jpg jpeg png gif" $fileExtension}}
                   <img alt="gallery" class="rounded" src="{{ . | absURL }}" alt="item object"> <!-- src="/cdn-cgi/image/fit=scale-down,width=300/{{ .| absURL }}" -->
-                {{ else if in . "imagedelivery.net" }}
-                  <embed src="{{ . }}" width="100%;" height="auto;" alt="item object" class="h-40 rounded w-full object-cover object-center mb-6">
                 {{ else }}
                   {{ partial "app/item-list-sections-dummy-thumbnail.html" $path }}
                 {{ end }}
