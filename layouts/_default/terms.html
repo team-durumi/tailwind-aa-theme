@@ -2,12 +2,11 @@
   {{ partial "basic/header-logo.html" . }}
 {{ end }}
 {{ define "main" }}
-<!-- terms.html(다크모드 작업) 에 수정합니다. -->
 <section class="text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900 body-font">
-  <div class="px-5 p-24 mx-auto">
+  <div class="px-5 pt-24 pb-8 mx-auto">
     <div class="flex flex-col text-center w-full">
       <h1 class="sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-gray-100">{{ .Title }}</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">{{ .Params.Description }}</p>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base mb-8">{{ .Params.Description }}</p>
     </div>
   </div>
 </section>
