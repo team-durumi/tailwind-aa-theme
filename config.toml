@@ -1,5 +1,7 @@
 baseURL = "https://example.org"
 
+defaultContentLanguage = "ko"
+
 [taxonomies]
   tag = "tags"
   creator = "creators"
