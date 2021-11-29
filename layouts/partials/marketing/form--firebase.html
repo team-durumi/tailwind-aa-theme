@@ -1,0 +1,68 @@
+<form x-data="contactForm()" @submit.prevent="submit">
+  <div class="p-2 w-full" alt="이름">
+    <div class="relative">
+      <label for="name" class="leading-7 text-sm text-gray-600">이름</label>
+      <input type="text" id="name" name="name" x-model="data.name" placeholder="아이템 제목을 추가하세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+    </div>
+  </div>  
+  <label>
+    <label for="org" class="leading-7 text-sm text-gray-600">조직</label>
+    <textarea name="org" x-model="data.org" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></textarea>
+  </label>
+  <div class="p-2 w-full" alt="이메일">
+    <div class="relative">
+      <label for="email" class="leading-7 text-sm text-gray-600">이메일</label>
+      <input type="email" id="email" name="email" x-model="data.email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+    </div>
+  </div>
+  <div class="p-2 w-full" alt="자료">
+    <div class="relative">
+      <label for="message" class="leading-7 text-sm text-gray-600">자료설명</label>
+      <textarea id="message" name="message" x-model="data.message" placeholder="설명을 남겨주세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+    </div>
+  </div>
+  <button type="submit" x-text="buttonText" :disabled="loading" class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+    신청
+  </button>
+</form>
+
+<script>
+  const FIREBASE_ACTION_URL = "https://aa-durumi-io-default-rtdb.asia-southeast1.firebasedatabase.app/collect-items.json";
+
+  function contactForm() {
+    return {
+      data: {
+        id: "",
+        name: "",
+        org: "",
+        email: "",
+        message:"",
+      },
+      buttonText: "접수",
+      loading: false,
+      submit() {
+        this.buttonText = "접수중입니다.";
+        this.loading = true;
+        fetch(FIREBASE_ACTION_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify(this.data),
+        })
+          .then(() => {
+            alert("접수가 완료되었습니다.");
+          })
+          .catch(() => {
+            alert("Something went wrong");
+          })
+          .finally(() => {
+            this.data.message = ""
+            this.buttonText = "Submit";
+            this.loading = false;
+          });
+      },
+    };
+  }
+</script>
