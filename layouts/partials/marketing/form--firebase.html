@@ -1,39 +1,35 @@
 <section class="text-gray-600 body-font relative">
   <div class="container px-5 py-24 mx-auto">
-    <div class="lg:w-1/2 md:w-2/3 mx-auto">
-      <div class="flex flex-wrap -m-2">  
-        <form x-data="contactForm()" @submit.prevent="submit">
-          <div class="p-2 w-full" alt="제목">
-            <div class="relative">
-              <label for="name" class="leading-7 text-sm text-gray-600">제목</label>
-              <input type="text" id="name" name="name" x-model="data.name" placeholder="아이템 제목을 추가하세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-          </div>  
-          <div class="p-2 w-full" alt="조직">
-            <div class="relative">
-              <label for="org" class="leading-7 text-sm text-gray-600">조직</label>
-              <input type="org" id="org" name="org" x-model="data.org" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </label>
-             </div>
-          </div>
-          <div class="p-2 w-full" alt="이메일">
-            <div class="relative">
-              <label for="email" class="leading-7 text-sm text-gray-600">이메일</label>
-              <input type="email" id="email" name="email" x-model="data.email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-          </div>
-          <div class="p-2 w-full" alt="자료설명">
-            <div class="relative">
-              <label for="message" class="leading-7 text-sm text-gray-600">자료설명</label>
-              <textarea id="message" name="message" x-model="data.message" placeholder="설명을 남겨주세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-            </div>
-          </div>
-          <button type="submit" x-text="buttonText" :disabled="loading" class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
-            수집
-          </button>
-        </form>
+    <form x-data="contactForm()" @submit.prevent="submit">
+      <div class="p-2 w-full" alt="제목">
+        <div class="relative">
+          <label for="name" class="leading-7 text-sm text-gray-600">제목</label>
+          <input type="text" id="name" name="name" x-model="data.name" placeholder="아이템 제목을 추가하세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
       </div>  
-    </div>
+      <div class="p-2 w-full" alt="생산자">
+        <div class="relative">
+          <label for="creators" class="leading-7 text-sm text-gray-600">생산자</label>
+          <input type="creators" id="creators" name="creators" x-model="data.creators" placeholder="수집한 알콜의 생산자를 작성해주세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </label>
+         </div>
+      </div>
+      <div class="p-2 w-full" alt="이메일">
+        <div class="relative">
+          <label for="email" class="leading-7 text-sm text-gray-600">이메일</label>
+          <input type="email" id="email" name="email" x-model="data.email" placeholder="작성자 이메일을 작성해주세요 ." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+      </div>
+      <div class="p-2 w-full" alt="수집자료설명">
+        <div class="relative">
+          <label for="message" class="leading-7 text-sm text-gray-600">수집자료설명</label>
+          <textarea id="message" name="message" x-model="data.message" placeholder="설명을 남겨주세요." class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+        </div>
+      </div>
+      <button type="submit" x-text="buttonText" :disabled="loading" class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+        수집
+      </button>
+    </form>
    </div>
 </section>    
 <script>
@@ -74,4 +70,4 @@
       },
     };
   }
-</script>
+</script> 
