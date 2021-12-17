@@ -30,8 +30,8 @@
 									{{ if eq $extension "pdf" }}
 										<embed src="{{ . }}" width="100%;" height="800px;" alt="pdf">
 									{{ else }}
-									  {{ $src := partial "basic/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
-										<img class="h-full rounded w-full object-cover object-center mb-6" src="{{ $src }}" alt="item object">
+									  {{ $src := partial "basic/cf-image.html" (dict "style" "full" "src" . "settings" $settings) }}
+										<img class="rounded w-full object-cover object-center mb-6" src="{{ $src }}" alt="item object">
 									{{ end }}
 				      	{{ end }}
 				    	{{ else }}
