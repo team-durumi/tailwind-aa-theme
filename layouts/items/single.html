@@ -24,8 +24,8 @@
 			    	<!-- item IMG / PDF / Youtube -->
 				    <div class="mt-1 w-full">
 				    	{{ if .Params.components }}
+				    		{{ $settings := .Site.Params }}
 				      	{{ range .Params.Components }}
-				      	  {{ $settings := .Site.Params }}
 									{{ $extension := index (last 1 (split  . "." )) 0 }}
 									{{ if eq $extension "pdf" }}
 										<embed src="{{ . }}" width="100%;" height="800px;" alt="pdf">
