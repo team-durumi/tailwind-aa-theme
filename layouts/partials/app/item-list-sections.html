@@ -11,10 +11,12 @@
                 <div class="bg-gray-100 hover:bg-gray-200 border border-gray-100 dark:bg-gray-900 dark:hover:bg-gray-700 dark:border dark:border-gray-200 p-6 rounded-lg">
                   {{ $path := .Path}}
                   {{ if .Params.components }} 
+                    {{ $settings := .Site.Params }}
                     {{ range .Params.components }}
                       {{ $fileExtension := index (last 1 (split . ".")) 0 }}
                       {{ if in "jpg jpeg png gif" $fileExtension}}
-                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="/cdn-cgi/image/fit=scale-down,width=1920/{{ .| absURL }}" alt="item image">
+                        {{ $src := partial "basic/cf-image.html" (dict "style" "thumb" "src" . "settings" $settings) }}
+                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="{{ $src }}" alt="item image">
                       {{ else }}
                         {{ partial "app/item-list-sections-dummy-thumbnail.html" $path }}
                       {{ end }}
